@@ -8,6 +8,9 @@ import useLogout from "../../hooks/useLogout";
 import ItemLink from "./components/ItemLink";
 import { useUserContext } from "../../context/UserContext";
 
+// TODO: Llevaria esta constante a la carpeta constanst
+// TODO: La validacion de la linea 39 la haria en alguna utils
+
 const NAVEGATION_LIST = [
   {
     title: "login",
