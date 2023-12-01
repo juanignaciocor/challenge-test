@@ -2,6 +2,7 @@ import { useUserContext } from "../../context/UserContext";
 import { NAVEGATION_HOME } from "../../constants/navegation";
 
 const WrapperAuthorized = ({ children }) => {
+  // La utilidad de este wrapper es que si no estamos auth , nos envie a la vista de login
   const { user } = useUserContext();
   const redirectToLogin = (e) => {
     e.preventDefault();
