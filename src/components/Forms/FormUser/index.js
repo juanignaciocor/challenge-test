@@ -1,6 +1,10 @@
 import { useCallback } from "react";
 import useFormUser from "../../../hooks/useFormUser";
 
+// TODO: Agregaria validaciones para el input button, ya que puede enviar los datos vacios y generar el request
+// le generaria una validacion para que si no tiene alguno de los dos valores requeridos este disabled y tambien agregue
+// un label rojo abajo de los campos requeridos.
+
 const FormUser = ({ onSubmit }) => {
   const { handlerChange, user } = useFormUser();
 

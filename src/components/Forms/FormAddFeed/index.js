@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react";
 import useAddFeed from "../../../hooks/useAddFeed";
 
+// TODO: agregaria que el input tenga que tener un valor requerido.
+
 const FormAddFeed = () => {
   const [feed, setFeed] = useState("");
 
