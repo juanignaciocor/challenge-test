@@ -20,8 +20,8 @@ const useAddFeed = () => {
       );
       openSnackbar(`Felicitationes se agrego :${response.data.title}`);
     } catch (err) {
-      // TODO : Podriamos devolver una error que nos muestre un snackbar y asi informarle al usuario
-      console.log(err);
+      openSnackbar(`Ups, ubo un error prueba mas tarde`);
+
     }
   };
 

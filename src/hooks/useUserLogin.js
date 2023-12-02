@@ -1,6 +1,10 @@
 import { rest } from "../config/axios";
 import { NAVEGATION_FEED } from "../constants/navegation";
-const userLogin = () => {
+import { useSnackbar } from "react-simple-snackbar";
+
+const useUserLogin = () => {
+  const [openSnackbar] = useSnackbar();
+
   const handlerLoginUser = async (body) => {
     try {
       const response = await rest.post("/login", {
@@ -12,7 +16,7 @@ const userLogin = () => {
       window.location.replace(NAVEGATION_FEED);
     } catch (err) {
       // TODO : Podriamos devolver una error que nos muestre un snackbar y asi informarle al usuario
-      console.log(err);
+      openSnackbar(`Ups, ubo un error prueba mas tarde`);
     }
   };
 
@@ -21,4 +25,4 @@ const userLogin = () => {
   };
 };
 
-export default userLogin;
+export default useUserLogin;
